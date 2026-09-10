@@ -71,8 +71,8 @@
 &kp ESC    &kp F1    &kp F2       &kp F3      &kp F4     &kp F5       &kp F6       &kp F7      &kp F8     &kp F9     &kp F10    &kp F11    &kp F12    &kp HOME   &kp END  &kp INSERT  &to 1
 &kp GRAVE  &kp N1    &kp N2       &kp N3      &kp N4     &kp N5       &kp N6       &kp N7      &kp N8     &kp N9     &kp N0     &kp MINUS  &kp EQUAL  &kp BSPC
 &kp TAB    &kp Q     &kp W        &kp E       &kp R      &kp T        &kp Y        &kp U       &kp I      &kp O      &kp P      &kp LBKT   &kp RBKT   &kp BSLH   &kp DEL
-&kp CLCK   &kp A     &lt 4 S      &lt 1 D     &lt 2 F    &lt 5 G      &kp H        &lt 2 J     &kp K      &kp L      &kp SEMI   &kp SQT    &kp RET    &kp PG_UP
-&kp LSHFT  &lt 3 Z   &kp X        &kp C       &kp V      &lt 6 B      &kp N        &kp M       &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT  &kp UP     &kp PG_DN
+&mt LSHFT ESC &kp A  &lt 3 S      &lt 1 D     &lt 2 F    &lt 4 G      &kp H        &lt 2 J     &kp K      &kp L      &kp SEMI   &kp SQT    &kp RET    &kp PG_UP
+&kp LSHFT  &kp Z     &kp X        &kp C       &kp V      &lt 5 B      &kp N        &kp M       &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT  &kp UP     &kp PG_DN
 &kp LCTRL  &kp LGUI  &kp LALT     &spc_ctl LCTRL SPACE   &kp SPACE    &kp RALT     &kp K_CMENU  &kp RCTRL  &kp LEFT   &kp DOWN   &kp RIGHT  &none
 VIRTUAL_NONE_384
             >;
@@ -83,10 +83,10 @@ VIRTUAL_NONE_384
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans          &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &to 0
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &kp KP_NUMLOCK &trans  &kp FSLH &kp ASTRK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans   &kp N7         &kp N8  &kp N9   &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp FSLH &kp N7         &kp N8  &kp N9   &kp ASTRK  &trans  &trans  &trans  &trans
 &studio_unlock &trans  &trans  &trans  &trans  &trans   &kp MINUS      &kp N4  &kp N5   &kp N6    &kp PLUS  &kp COMMA  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp EQUAL &kp N1       &kp N2  &kp N3   &kp DOT    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp N0  &trans  &kp K_CMENU &kp RCTRL  &trans  &trans  &trans  &none
+&trans  &trans  &trans  &trans  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &none
 VIRTUAL_TRANS_384
             >;
         };
@@ -96,7 +96,7 @@ VIRTUAL_TRANS_384
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans
-&trans  &trans  &trans  &kp UP   &kp F4  &kp F9  &kp PG_UP  &kp HOME  &kp UP  &kp END  &trans  &trans  &trans  &kp F12  &trans
+&trans  &trans  &trans  &kp UP   &kp F4  &kp F9  &kp PG_UP  &kp HOME  &kp UP  &kp END  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp F2  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp K_CMENU  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none
@@ -105,19 +105,6 @@ VIRTUAL_TRANS_384
         };
 
         extra2 {
-            display-name = "System";
-            bindings = <
-&to 0  &trans  &trans  &trans  &trans  &trans  &trans   &bl BL_CYCLE  &trans  &trans  &trans  &trans  &bth 0 0  &trans  &trans  &bootloader  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&studio_unlock &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none
-VIRTUAL_TRANS_384
-            >;
-        };
-
-        extra3 {
             display-name = "FN-KP";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -130,7 +117,7 @@ VIRTUAL_TRANS_384
             >;
         };
 
-        extra4 {
+        extra3 {
             display-name = "Mouse";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -143,7 +130,7 @@ VIRTUAL_TRANS_384
             >;
         };
 
-        extra5 {
+        extra4 {
             display-name = "Media";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -156,7 +143,7 @@ VIRTUAL_TRANS_384
             >;
         };
 
-        extra6 {
+        extra5 {
             display-name = "Yellow";
             status = "reserved";
         };
