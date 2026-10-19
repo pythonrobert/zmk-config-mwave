@@ -61,9 +61,9 @@
             timeout-ms = <50>;
         };
 
-        rt_mute {
+        er_mute {
             bindings = <&kp C_MUTE>;
-            key-positions = <35 36>;
+            key-positions = <34 35>;
             layers = <0>;
             timeout-ms = <50>;
         };
